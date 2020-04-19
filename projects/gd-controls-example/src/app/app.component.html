@@ -1,0 +1,102 @@
+<gd-window #myWindow1>
+    <gd-accordion #myAccordion [IsContentBorderVisible]=true>
+        <!-- <gd-accordion #myAccordion [IsContentBorderVisible]=true (headerClicked)="onHeaderClicked($event)"> -->
+
+        <div class="gd-accordion-header">Header1
+            <div class="gd-accordion-btn">
+                <!-- <div class="gd-accordion-btn" (click)="onClick($event)" > -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" enable-background="new 0 0 14 14">
+                    <polygon points="7,0 7,12 13,6 7,0"/>
+                </svg> 
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="item">content1</div>
+            <div class="item">content2</div>
+        </div>
+        
+        <div class="gd-accordion-header">Header2
+            <div class="gd-accordion-btn">
+                <!-- <div class="gd-accordion-btn" (click)="onClick($event)" > -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" enable-background="new 0 0 14 14">
+                    <polygon points="7,0 7,12 13,6 7,0"/>
+                </svg> 
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="item">content1</div>
+            <div class="item">content2</div>
+            <div class="item">content3</div>
+        </div>
+
+        <div class="gd-accordion-header">Header3
+            <div class="gd-accordion-btn">
+                <!-- <div class="gd-accordion-btn" (click)="onClick($event)" > -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" enable-background="new 0 0 14 14">
+                    <polygon points="7,0 7,12 13,6 7,0"/>
+                </svg> 
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="item">content1</div>
+            <div class="item">content2</div>
+        </div>
+
+    </gd-accordion>
+</gd-window>
+
+<gd-window #myWindow2>
+    <gd-pg #myPG [Settings]="pgSettings" [Data]="PGData"></gd-pg>
+</gd-window>
+
+<gd-window #myWindow3>
+    <gd-tab #myTab [Active]="'Paris'">
+        <div class="gd-tab">
+            <div class="gd-tab-header">London</div>
+            <div class="gd-tab-header">Paris</div>
+            <div class="gd-tab-header">Tokyo</div>
+        </div>
+          
+        <div class="gd-tab-content">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+          
+        <div class="gd-tab-content">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p> 
+        </div>
+          
+        <div class="gd-tab-content">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>        
+    </gd-tab>
+</gd-window>
+
+<gd-window #myWindow4>
+    <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... Right click here ...<br>
+</gd-window>
+
+<gd-contextmenu #myMenu (itemClick)="onMyMenuItemClick($event)">
+    <li>
+        <div style="float: left; margin: 1px 1px 0 2px"><img src='assets/Images/Add.png'/></div>
+        <div class="gd-separetor" style="float: left;"></div>
+        <div style="float: left; font-size: 12px; margin: 3px 0 0 8px">Add</div>
+    </li>
+    <li>
+        <div style="float: left; margin: 1px 2px 0 2px"><img src='assets/Images/Edit.png'/></div>
+        <div class="gd-separetor" style="float: left;"></div>
+        <div style="float: left; font-size: 12px; margin: 3px 0 0 8px">Edit</div>
+    </li>
+    <li>
+        <div style="float: left; margin: 1px 2px 0 2px"><img src='assets/Images/Delete.png'/></div>
+        <div class="gd-separetor" style="float: left;"></div>
+        <div style="float: left; font-size: 12px; margin: 3px 0 0 8px">Delete</div>
+    </li>
+</gd-contextmenu> 
