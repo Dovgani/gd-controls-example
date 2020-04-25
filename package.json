@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "controls-pack": "ng build && cd dist/controls-example && npm pack",
+    "controls-pack": "ng build && cd dist/gd-controls-example && npm pack",
     "e2e": "ng e2e"
   },
   "private": true,

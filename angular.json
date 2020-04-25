@@ -3,28 +3,28 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "controls-example": {
+    "gd-controls-example": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/controls-example",
-      "sourceRoot": "projects/controls-example/src",
+      "root": "projects/gd-controls-example",
+      "sourceRoot": "projects/gd-controls-example/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/controls-example",
-            "index": "projects/controls-example/src/index.html",
-            "main": "projects/controls-example/src/main.ts",
-            "polyfills": "projects/controls-example/src/polyfills.ts",
-            "tsConfig": "projects/controls-example/tsconfig.app.json",
+            "outputPath": "dist/gd-controls-example",
+            "index": "projects/gd-controls-example/src/index.html",
+            "main": "projects/gd-controls-example/src/main.ts",
+            "polyfills": "projects/gd-controls-example/src/polyfills.ts",
+            "tsConfig": "projects/gd-controls-example/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/controls-example/src/favicon.ico",
-              "projects/controls-example/src/assets"
+              "projects/gd-controls-example/src/favicon.ico",
+              "projects/gd-controls-example/src/assets"
             ],
             "styles": [
-              "projects/controls-example/src/styles.css"
+              "projects/gd-controls-example/src/styles.css"
             ],
             "scripts": []
           },
@@ -32,8 +32,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/controls-example/src/environments/environment.ts",
-                  "with": "projects/controls-example/src/environments/environment.prod.ts"
+                  "replace": "projects/gd-controls-example/src/environments/environment.ts",
+                  "with": "projects/gd-controls-example/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -62,33 +62,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "controls-example:build"
+            "browserTarget": "gd-controls-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "controls-example:build:production"
+              "browserTarget": "gd-controls-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "controls-example:build"
+            "browserTarget": "gd-controls-example:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/controls-example/src/test.ts",
-            "polyfills": "projects/controls-example/src/polyfills.ts",
-            "tsConfig": "projects/controls-example/tsconfig.spec.json",
-            "karmaConfig": "projects/controls-example/karma.conf.js",
+            "main": "projects/gd-controls-example/src/test.ts",
+            "polyfills": "projects/gd-controls-example/src/polyfills.ts",
+            "tsConfig": "projects/gd-controls-example/tsconfig.spec.json",
+            "karmaConfig": "projects/gd-controls-example/karma.conf.js",
             "assets": [
-              "projects/controls-example/src/favicon.ico",
-              "projects/controls-example/src/assets"
+              "projects/gd-controls-example/src/favicon.ico",
+              "projects/gd-controls-example/src/assets"
             ],
             "styles": [
-              "projects/controls-example/src/styles.css"
+              "projects/gd-controls-example/src/styles.css"
             ],
             "scripts": []
           }
@@ -97,9 +97,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/controls-example/tsconfig.app.json",
-              "projects/controls-example/tsconfig.spec.json",
-              "projects/controls-example/e2e/tsconfig.json"
+              "projects/gd-controls-example/tsconfig.app.json",
+              "projects/gd-controls-example/tsconfig.spec.json",
+              "projects/gd-controls-example/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -109,12 +109,12 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/controls-example/e2e/protractor.conf.js",
-            "devServerTarget": "controls-example:serve"
+            "protractorConfig": "projects/gd-controls-example/e2e/protractor.conf.js",
+            "devServerTarget": "gd-controls-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "controls-example:serve:production"
+              "devServerTarget": "gd-controls-example:serve:production"
             }
           }
         }
@@ -123,5 +123,5 @@
   "cli": {
     "analytics": false
   },
-  "defaultProject": "controls-example"
+  "defaultProject": "gd-controls-example"
 }
