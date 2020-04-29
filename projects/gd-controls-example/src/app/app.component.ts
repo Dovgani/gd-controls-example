@@ -37,6 +37,7 @@ export class AppComponent implements AfterViewInit
         Description : 'Description',
         Date        : '01/06/2020',
         IsDefault   : true,
+        CustomStyle : { Name : "Custom1", Description : "Custom1 Description", Date : "04/28/2020" },
         Style       : '',
         StyleID     : 1,
         Color       : '#ff00ff'
@@ -120,6 +121,60 @@ export class AppComponent implements AfterViewInit
                         isCustom      : false,
                         isDisabled    : false,
                         tabStop       : 7
+                    },
+                    {
+                        categoryName  : 'Properties',
+                        name          : 'CustomStyle',
+                        childName     : 'Name',
+                        nameID        : 'StyleID',
+                        display       : 'Custom Style',
+                        type          : 'number',
+                        editor        : 'object',
+                        valueID       : 2,
+                        data          : [ 
+                            {
+                                Name: 'Default Properties',
+                                isExpanded : true,
+                                isDisabled : true,
+                                Properties: [
+                                    {
+                                        categoryName  : 'Properties',
+                                        name          : 'Name',
+                                        display       : 'Name',
+                                        type          : 'string',
+                                        editor        : 'string',
+                                        required      : '*',
+                                        isCustom      : false,
+                                        isDisabled    : false,
+                                        tabStop       : 1
+                                    },
+                                    {
+                                        categoryName  : 'Properties',
+                                        name          : 'Description',
+                                        display       : 'Description',
+                                        type          : 'text',
+                                        editor        : 'text',
+                                        isCustom      : false,
+                                        isDisabled    : false,
+                                        tabStop       : 2
+                                    },
+                                    {
+                                        categoryName  : 'Properties',
+                                        name          : 'Date',
+                                        display       : 'Date',
+                                        type          : 'date',
+                                        editor        : 'date',
+                                        data          : 'mm/dd/yyyy',
+                                        isCustom      : false,
+                                        isDisabled    : false,
+                                        tabStop       : 3
+                                    }
+                                ]
+                            }       
+                        ], 
+                        isCustom      : false,
+                        isDisabled    : false,
+                        tabStop       : 8
                     },
                     {
                         categoryName  : 'Properties',
