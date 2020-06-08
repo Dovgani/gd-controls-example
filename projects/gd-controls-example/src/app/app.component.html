@@ -83,6 +83,16 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... Right click here ...<br>
 </gd-window>
 
+<gd-window #myWindow5>
+    <gd-splitter [Settings]="splitter">
+        <div panel="top">Top panel</div>   
+        <div panel="left">Left panel</div>   
+        <div panel="right">Right panel</div>   
+        <div panel="bottom">Bottom panel</div>   
+        <div panel="center">Center panel</div>   
+    </gd-splitter>    
+</gd-window>
+
 <gd-contextmenu #myMenu (itemClick)="onMyMenuItemClick($event)">
     <li>
         <div style="float: left; margin: 1px 1px 0 2px"><img src='assets/Images/Add.png'/></div>

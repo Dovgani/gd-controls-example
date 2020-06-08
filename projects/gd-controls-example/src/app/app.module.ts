@@ -8,6 +8,7 @@ import { GDCommonModule      } from 'gd-common';
 import { GDTabModule         } from 'gd-tab';
 import { GDPGModule          } from 'gd-pg';
 import { GDAccordionModule   } from 'gd-accordion';
+import { GDSplitterModule    } from 'gd-splitter';
 import { GDContextmenuModule } from 'gd-contextmenu';
 import { AppComponent        } from './app.component';
 
@@ -23,6 +24,7 @@ import { AppComponent        } from './app.component';
     GDCommonModule,
     GDContextmenuModule,
     GDAccordionModule,
+    GDSplitterModule,
     GDTabModule,
     GDPGModule,
     GDWindowModule

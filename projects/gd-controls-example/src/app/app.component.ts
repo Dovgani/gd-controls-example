@@ -9,6 +9,8 @@ import { GDPGComponent          } from 'gd-pg';
 import { IPGCategory            } from 'gd-common';
 import { PGData, IPGData        } from 'gd-common';
 import { GDCommonService        } from 'gd-common';
+import { ISplitter              } from 'gd-common';
+import { SplitterPanels         } from 'gd-common';
 import { GDWindowComponent      } from 'gd-window';
 
 import { Subscription           } from 'rxjs';
@@ -24,9 +26,12 @@ export class AppComponent implements AfterViewInit
     @ViewChild('myWindow2')     window2   : GDWindowComponent;
     @ViewChild('myWindow3')     window3   : GDWindowComponent;
     @ViewChild('myWindow4')     window4   : GDWindowComponent;
+    @ViewChild('myWindow5')     window5   : GDWindowComponent;
     @ViewChild('myAccordion')   accordion : GDAccordionComponent;
     @ViewChild('myPG')          pg        : GDPGComponent;
     @ViewChild('myMenu')        myMenu    : GDContextmenuComponent;
+
+    public  splitter   : ISplitter;
 
     public  pgSettings : Array<IPGCategory>;
     private pgData     : IPGData;
@@ -273,6 +278,61 @@ export class AppComponent implements AfterViewInit
         this.window4.W =  270;
         this.window4.H =  300;
         this.window4.Open();
+
+        this.splitter = 
+        {
+            buttonSize : 0, 
+            panels :
+            [
+                {
+                    layout             : SplitterPanels.top, 
+                    isOpened           : true,
+                    isButtonVisible    : false,
+                    isSeperatorVisible : true,
+                    isSeperatorLocked  : true,
+                    seperatorThickness : 1,
+                    size               : 50 
+                },
+                { 
+                    layout             : SplitterPanels.left, 
+                    isOpened           : true,
+                    isButtonVisible    : true,
+                    isSeperatorVisible : true,
+                    isSeperatorLocked  : false,
+                    seperatorThickness : 3,
+                    size               : 50 
+                },
+                { 
+                    layout             : SplitterPanels.right, 
+                    isOpened           : true,
+                    isButtonVisible    : true,
+                    isSeperatorVisible : true,
+                    isSeperatorLocked  : false,
+                    seperatorThickness : 3,
+                    size               : 50 
+                },
+                {
+                    layout             : SplitterPanels.bottom, 
+                    isOpened           : true,
+                    isButtonVisible    : true,
+                    isSeperatorVisible : true,
+                    isSeperatorLocked  : false,
+                    seperatorThickness : 3,
+                    size               : 50 
+                },
+            ]    
+        };
+
+        this.window5.AddClass('gd-splitter');    
+        this.window5.IsIconVisible = true;
+        this.window5.Icon          = './assets/Images/favicon.ico';
+        this.window5.Title         = 'GD Splitter';
+        this.window5.Y =   40;
+        this.window5.X = 1330;
+        this.window5.W =  300;
+        this.window5.H =  300;
+        this.window5.Open();
+
     }    
 
     public  ngOnDestroy()
@@ -307,8 +367,7 @@ export class AppComponent implements AfterViewInit
 
         setTimeout( () =>
         {
-            this.myMenu.Show( data.event.pageX + 15, data.event.pageY + 15, 120, 75, ['Add'], null );
-
+            this.myMenu.Show( data.event.pageX + 15, data.event.pageY + 15, 120, 77, ['Add'], null );
         }, 500 );
     }
 
