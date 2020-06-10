@@ -1,16 +1,19 @@
-import { FormsModule         } from '@angular/forms';
-import { BrowserModule       } from '@angular/platform-browser';
-import { NgModule            } from '@angular/core';
-import { CommonModule        } from '@angular/common'; 
+import { FormsModule          } from '@angular/forms';
+import { BrowserModule        } from '@angular/platform-browser';
+import { NgModule             } from '@angular/core';
+import { CommonModule         } from '@angular/common'; 
 
-import { GDWindowModule      } from 'gd-window';
-import { GDCommonModule      } from 'gd-common';
-import { GDTabModule         } from 'gd-tab';
-import { GDPGModule          } from 'gd-pg';
-import { GDAccordionModule   } from 'gd-accordion';
-import { GDSplitterModule    } from 'gd-splitter';
-import { GDContextmenuModule } from 'gd-contextmenu';
-import { AppComponent        } from './app.component';
+import { GDWindowModule       } from 'gd-window';
+import { GDCommonModule       } from 'gd-common';
+import { GDTabModule          } from 'gd-tab';
+import { GDPGModule           } from 'gd-pg';
+import { GDAccordionModule    } from 'gd-accordion';
+import { GDGraphWrapperModule } from 'gd-graph-wrapper';
+import { GDGraphModule        } from 'gd-graph';
+import { GDTooltipModule      } from 'gd-tooltip';
+import { GDSplitterModule     } from 'gd-splitter';
+import { GDContextmenuModule  } from 'gd-contextmenu';
+import { AppComponent         } from './app.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { AppComponent        } from './app.component';
     GDContextmenuModule,
     GDAccordionModule,
     GDSplitterModule,
+    GDGraphWrapperModule,
+    GDGraphModule,
+    GDTooltipModule,
     GDTabModule,
     GDPGModule,
     GDWindowModule
