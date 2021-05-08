@@ -28,7 +28,7 @@
     "gd-tab": "file:../../gd-workspace/dist/gd-tab/gd-tab-0.0.11.tgz",
     "gd-tooltip": "file:../../gd-workspace/dist/gd-tooltip/gd-tooltip-0.1.0.tgz",
     "gd-window": "file:../../gd-workspace/dist/gd-window/gd-window-0.0.23.tgz",
-    "ng-packagr": "^9.1.0",
+    "ng-packagr": "^10.1.1",
     "rollup": "^1.20.3",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
